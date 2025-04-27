@@ -172,15 +172,15 @@ To deploy this project to a production server, follow these steps:
 
 ### Main Overview
 
-![Issue Certificate](./assets_md/scr1.png)
+![Issue Certificate](./asset_md/scr1.png)
 
 ### Issuer and Fetch Function
 
-![Issue Certificate](./assets_md/scr2.png)
+![Issue Certificate](./asset_md/scr2.png)
 
 ### Etherscan Block Hash Issued
 
-![Issue Certificate](./assets_md/scr3.png)
+![Issue Certificate](./asset_md/scr3.png)
 
 ## Contributing
 
