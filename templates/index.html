@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Issuer Apps</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Certificate Issuer With Blockchain <small class="d-block" style="font-size: 18px; font-weight: normal; text-transform: lowercase;">(Immutable web 3 Blockchain with Ethereum - Smart Contract)</small></h1>
+        
+
+        <!-- Author Information -->
+        <div class="text-center mt-4">
+            <p><strong>GitHub:</strong> <a href="https://github.com/ndoteddy" target="_blank">github.com/ndoteddy</a>
+            </p>
+        </div>
+
+        <!-- Create a Row to split content into two columns -->
+        <div class="row">
+
+            <!-- Left Column (Certificate Issuer Form) -->
+            <div class="col-md-6">
+
+                 <!-- Metadata -->
+   
+             <div class="card mt-4">
+                    <div class="card-header">
+                        <h2>Metadata</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul style="font-size: 14px;">
+                            <li><strong>test network sepolia:</strong> sepolia is a test network for ethereum, allowing developers to deploy and test smart contracts without using real ether. it is essential for testing blockchain applications in a safe, cost-free environment before going live on the mainnet.</li>
+                            <li><strong>metamask account:</strong> metamask is a popular cryptocurrency wallet that allows users to interact with the ethereum blockchain. it is necessary for managing and signing transactions on the blockchain, including interacting with smart contracts and dapps such as the certificate issuer app.</li>
+                            <li><strong>remix:</strong> remix is an open-source, web-based IDE for writing, testing, and deploying smart contracts written in solidity. it provides an easy-to-use interface for developing and deploying contracts to various blockchain networks, including testnets like sepolia.</li>
+                            <li><strong>faucet:</strong> a faucet is a service that provides free test ether to developers. it allows developers to receive small amounts of cryptocurrency to test and interact with smart contracts on testnets like sepolia. this is essential for testing blockchain functionality without using real funds.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form to issue certificate -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h2>Issue a Certificate With Blockchain</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/issue_certificate" method="POST">
+                            <div class="form-group">
+                                <label for="certificate_id">Certificate ID:</label>
+                                <input type="number" class="form-control" id="certificate_id" name="certificate_id"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="student_name">Student Name:</label>
+                                <input type="text" class="form-control" id="student_name" name="student_name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="course_name">Course Name:</label>
+                                <input type="text" class="form-control" id="course_name" name="course_name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="issue_date">Issue Date:</label>
+                                <input type="text" class="form-control" id="issue_date" name="issue_date" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Issue Certificate</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Show transaction results here -->
+                <div id="transactionStatus" class="mt-4">
+                    <!-- Empty at first, will be populated with the transaction details -->
+                </div>
+
+                <hr>
+
+                <!-- Form to fetch certificate -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h2>Fetch a Certificate</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="fetchForm" class="form-inline">
+                            <div class="form-group mr-2">
+                                <label for="certificate_id_get" class="mr-2">Certificate ID:</label>
+                                <input type="number" class="form-control" id="certificate_id_get" name="certificate_id"
+                                    required>
+                            </div>
+
+                            <button type="submit" class="btn btn-info">Get Certificate</button>
+                        </form>
+
+                        <h3 class="mt-3">Certificate Details:</h3>
+                        <pre id="certificateDetails"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Blockchain Explanation) -->
+            <!-- Right Column (Blockchain Explanation) -->
+            <div class="col-md-6">
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h2>Blockchain Prerequisites</h2>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 14px; line-height: 1.6;">
+                            blockchain is a decentralized digital ledger technology that securely records transactions
+                            across multiple computers. it ensures that the information is immutable and transparent.
+                            some key prerequisites for understanding blockchain include:
+                        </p>
+                        <ul style="font-size: 14px;">
+                            <li><strong>solidify:</strong> a modern, user-friendly framework for developing smart
+                                contracts on the ethereum blockchain. it is essential for writing, testing, and
+                                deploying smart contracts in a secure and efficient manner. understanding solidity is
+                                crucial for integrating blockchain-based functionalities like certificate issuance.</li>
+                            <li><strong>remix:</strong> a powerful, open-source integrated development environment (IDE)
+                                for writing, deploying, and managing smart contracts on the ethereum blockchain. remix
+                                helps in testing and debugging smart contracts written in solidity, offering a web
+                                interface for deploying them to different testnets or the mainnet.</li>
+                            <li><strong>python:</strong> a versatile and widely-used programming language for scripting
+                                and interacting with blockchain applications. python can be used for automating tasks
+                                like interacting with the blockchain, managing certificate data, or integrating with
+                                smart contracts using web3.py or other libraries.</li>
+                            <li><strong>flask:</strong> a lightweight python web framework used for building web
+                                applications. in this project, flask can be used to build the backend server that
+                                communicates with the frontend, handles requests for issuing certificates, and interacts
+                                with blockchain networks through web3.</li>
+                            <li><strong>web3:</strong> a javascript library that allows developers to interact with the
+                                ethereum blockchain. web3.js is essential for sending transactions, querying smart
+                                contract functions, and interacting with decentralized applications (dapps).
+                                understanding web3 is necessary to integrate blockchain functionalities into your web
+                                application, such as issuing certificates and interacting with metamask.</li>
+                            <li><strong>faucet and google web3:</strong> a faucet is a service that provides free tokens
+                                for testing blockchain applications. google web3 can be used in conjunction with other
+                                web3 tools to interact with the blockchain, deploy smart contracts, and manage token
+                                transactions for testnet purposes. understanding how to use a faucet helps in testing
+                                your application before deploying it to the mainnet.</li>
+                            <li><strong>metamask and infura:</strong> metamask is a browser extension and mobile wallet
+                                that allows users to interact with the ethereum blockchain. infura provides a robust,
+                                scalable gateway to the ethereum network, allowing your application to interact with
+                                blockchain data and send transactions without hosting a full node. together, metamask
+                                and infura facilitate easy user interactions with blockchain applications in a secure
+                                and decentralized way.</li>
+                        </ul>
+                        <p style="font-size: 14px; line-height: 1.6;">
+                            understanding these tools and technologies will equip you with the necessary knowledge to
+                            integrate blockchain functionalities effectively in your certificate issuance application,
+                            ensuring security, transparency, and immutability of the data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer mt-5 bg-light text-center py-3">
+        <div class="container">
+            <p>Certificate Issuer | Built with 💻 by <strong>Nando Teddy Lab</strong></p>
+            <p>Find the source code on <a href="https://github.com/ndoteddy" target="_blank">GitHub</a></p>
+            <p>&copy; 2025 Hernando Ivan Teddy All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Handle fetching certificate asynchronously
+        document.getElementById('fetchForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const certificateId = document.getElementById('certificate_id_get').value;
+
+            fetch(`/get_certificate?certificate_id=${certificateId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const certificateDetails = `
+                        Student: ${data.student}
+                        Course: ${data.course}
+                        Issued On: ${data.issued_on}
+                    `;
+                    document.getElementById('certificateDetails').textContent = certificateDetails;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+        // Handle submitting issue certificate form and display transaction in the same page
+        document.querySelector('form[action="/issue_certificate"]').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const certificateId = document.getElementById('certificate_id').value;
+            const studentName = document.getElementById('student_name').value;
+            const courseName = document.getElementById('course_name').value;
+            const issueDate = document.getElementById('issue_date').value;
+
+            fetch('/issue_certificate', {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'certificate_id': certificateId,
+                    'student_name': studentName,
+                    'course_name': courseName,
+                    'issue_date': issueDate
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const txnStatus = `
+                    Certificate Issued Successfully! 
+                    Transaction Hash: <a href="https://sepolia.etherscan.io/tx/${data.transaction_hash}" target="_blank">${data.transaction_hash}</a>
+                `;
+                    document.getElementById('transactionStatus').innerHTML = txnStatus;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+
+</body>
+
+</html>
