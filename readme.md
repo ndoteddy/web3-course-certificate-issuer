@@ -2,6 +2,8 @@
 
 This project provides a decentralized certificate issuance system built on the Ethereum blockchain. Using smart contracts, the application allows institutions to issue, verify, and track course certificates securely and immutably.
 
+## Medium
+https://medium.com/scriptkiddiez/demystify-smart-contracts-your-gateway-to-the-next-gen-tech-bc012be12753
 ## Features
 
 - **Issue Certificates**: Institutions can issue course certificates using Ethereum-based smart contracts.
